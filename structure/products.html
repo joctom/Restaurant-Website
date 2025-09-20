@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="../styles/final_project.css">
+  <link rel="stylesheet" href="../styles/one_nine_zero_six.css">
+  <link rel="stylesheet" href="../styles/seven_six_eight.css">
+  <link rel="stylesheet" href="../styles/four_two_five.css">
+  <link rel="stylesheet" href="../styles/three_seven_five.css">
+  <link rel="stylesheet" href="../styles/three_six_five.css">
+  <link rel="stylesheet" href="../styles//three_three_five.css">
+  <link rel="stylesheet" href="../styles/three_two_zero.css">
+  <link rel="stylesheet" href="../styles/three_zero_zero.css">
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="contact-header">
+      <p><i class="fa-solid fa-location-dot"></i>Profugo St. Lucena City</p>
+        <p><i class="fa-regular fa-clock"></i>Daily: 9:00am - 10:00pm</p>
+        <p><i class="fa-solid fa-phone"></i>(042) 710 3531</p>
+        <p><i class="fa-regular fa-envelope"></i>antiguarestaurantlucena@gmail.com</p>
+    </div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="../images/home/logo.png" alt="Logo">
+      </div>
+      <nav>
+        <ul class="sidebar">
+          <li onclick="hideSide()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sign-in.html"><button>Sign in</button></a></li>
+        </ul>
+        <ul>
+          <li class="hideOnMobile"><a href="home.html">Home</a></li>
+          <li class="hideOnMobile"><a href="about.html">About</a></li>
+          <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+          <li class="hideOnMobile"><a href="products.html">Products</a></li>
+          <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+          <li><a href="sign-in.html"><button>Sign in</button></a></li>
+          <li class="hamburger-menu" onclick="showSidebar()">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="products" class="products">
+    <div class="products-specialty-background">
+      <img src="../images/products/products.png">
+    </div>
+    <div class="products-background">
+      <div class="products-heading">
+        <p>CAFE ANTIGUA</p>          
+        <script class="script">
+          var date = new Date();
+          var options = { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric', 
+              timeZone: 'Asia/Manila' 
+          };
+          document.write('<span class="date-style">' + date.toLocaleString('en-PH', options) + '</span>');
+        </script>
+        <div class="search-products">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search for food, deserts, etc...">
+        </div>
+      </div>
+      <div class="menu-lists">
+        <ul>
+          <li><a href="javascript:void(0)" class="navigation active" onclick="showCategory('specialty')">Specialties</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('chicken')">Chicken</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('pork')">Pork</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('beef')">Beef</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('seafood')">Seafoods</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('vegetable')">Vegetables</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('drink')">Drinks</a></li>
+          <li><a href="javascript:void(0)" class="navigation" onclick="showCategory('dessert')">Desserts</a></li>
+        </ul>
+        <div class="our-menu-heading">
+          <p>Our Menu</p>
+        </div>
+      </div>      
+      <div id="specialty" class="food-menu">
+        <div class="food">
+          <img src="../images/products/specialty-1.png">
+          <h3>PANCIT CHAMI</h3>
+          <p class="food-description">Stir-fried noodles with vegetables and meat</p>
+          <p class="food-price">85 - 180</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-2.png">
+          <h3>SIOPAO ASADO</h3>
+          <p class="food-description">Steamed buns filled with savory pork</p>
+          <p class="food-price">75</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-3.png">
+          <h3>TAPSILOG</h3>
+          <p class="food-description">Beef tapa served with fried rice and egg</p>
+          <p class="food-price">120</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-4.png">
+          <h3>CRISPY PATA</h3>
+          <p class="food-description">Deep-fried pork leg with crunchy skin</p>
+          <p  class="food-price">600</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-5.png">
+          <h3>FRIED CHICKEN</h3>
+          <p class="food-description">Golden chicken deep-fried to perfection</p>
+          <p class="food-price">220 - 430</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-6.png">
+          <h3>BEEF TAPA</h3>
+          <p class="food-description">Marinated grilled beef served for breakfast</p>
+          <p class="food-price">200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-7.png">
+          <h3>CHOPSUEY</h3>
+          <p class="food-description">Mixed stir-fried vegetables in sauce</p>
+          <p class="food-price">125 - 200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-8.png">
+          <h3>COLD CUTS</h3>
+          <p class="food-description">Sliced cured meats with cheese</p>
+          <p class="food-price">550</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/specialty-9.png">
+          <h3>LECHE FLAN</h3>
+          <p class="food-description">Creamy caramel custard desert</p>
+          <p class="food-price">60</p>
+        </div>
+      </div>
+      <div id="chicken" class="food-menu">
+        <div class="food">
+          <img src="../images/products/chicken-1.png">
+          <h3>OYSTER CHICKEN</h3>
+          <p class="food-description">Savory stir-fried chicken with oyster sauce</p>
+          <p class="food-price">225 - 450</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-2.png">
+          <h3>CRISPY CHICKEN</h3>
+          <p class="food-description">Fried chicken with golden breaded coating</p>
+          <p class="food-price">220 - 430</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-3.png">
+          <h3>CHICKEN CURRY</h3>
+          <p class="food-description">Chicken cooked in flavorful curry sauce</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-4.png">
+          <h3>CHICKEN FILLET</h3>
+          <p class="food-description">Tender thinly sliced chicken grilled and fried</p>
+          <p  class="food-price">225 - 350</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-5.png">
+          <h3>BONELESS CHICKEN</h3>
+          <p class="food-description">Chicken without bones</p>
+          <p class="food-price">225 - 350</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-6.png">
+          <h3>FRIED CHICKEN</h3>
+          <p class="food-description">Golden chicken deep-fried to perfection</p>
+          <p class="food-price">210 - 420</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-7.png">
+          <h3>CHICKEN w/ HAM & SHRIMP</h3>
+          <p class="food-description">Chicken combined with ham and shrimp</p>
+          <p class="food-price">225 - 350</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-8.png">
+          <h3>CHICKEN SOUP SAUCE</h3>
+          <p class="food-description">Chicken with chinese soup sauce</p>
+          <p class="food-price">220 - 440</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/chicken-9.png">
+          <h3>CHICKEN A LA KING</h3>
+          <p class="food-description">Creamy chicken dish with mushrooms</p>
+          <p class="food-price">190 - 260</p>
+        </div>
+      </div>
+      <div id="pork" class="food-menu">
+        <div class="food">
+          <img src="../images/products/pork-9.png">
+          <h3>LECHON KAWALI</h3>
+          <p class="food-description">Crispy fried pork belly with sauce</p>
+          <p class="food-price">220</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-8.png">
+          <h3>PATATIM</h3>
+          <p class="food-description">Braised pork hocks in a savory sauce</p>
+          <p class="food-price">650</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-7.png">
+          <h3>SWEET & SOUR PORK</h3>
+          <p class="food-description">Crispy pork in tangy sweet-sour sauce</p>
+          <p class="food-price">220 - 350</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-6.png">
+          <h3>PORK BISTEK TAGALOG</h3>
+          <p class="food-description">Marinated pork with soy sauce and onions</p>
+          <p  class="food-price">220 - 340</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-5.png">
+          <h3>PORK ASADO</h3>
+          <p class="food-description">Stewed pork in a sweet savory sauce</p>
+          <p class="food-price">220 - 340</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-4.png">
+          <h3>HOMBA</h3>
+          <p class="food-description">Sweet and savory braised pork dish</p>
+          <p class="food-price">650</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-3.png">
+          <h3>FRIED PORK CHOP</h3>
+          <p class="food-description">Breaded pork chop, deep-friend until golden</p>
+          <p class="food-price">220 - 440</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-2.png">
+          <h3>CRISPY PATA</h3>
+          <p class="food-description">Deep-fried pork leg with crunchy skin</p>
+          <p class="food-price">650</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/pork-1.png">
+          <h3>GRILLED PORK TENDERLOIN</h3>
+          <p class="food-description">Tender pork grilled with spices</p>
+          <p class="food-price">200 - 340</p>
+        </div>
+      </div>
+      <div id="beef" class="food-menu">
+        <div class="food">
+          <img src="../images/products/beef-1.png">
+          <h3>BEEF STEAK</h3>
+          <p class="food-description">Juicy grilled ir pan-seared beef cut</p>
+          <p class="food-price">180 - 320</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-2.png">
+          <h3>BEEF w/ YOUNG CORN</h3>
+          <p class="food-description">Stir-fried beef with tender young corn</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-3.png">
+          <h3>BEEF BISTEK TAGALOG</h3>
+          <p class="food-description">Marinated beef in soy sayce</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-4.png">
+          <h3>BEEF TAPA</h3>
+          <p class="food-description">Marinated grilled beef</p>
+          <p  class="food-price">200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-5.png">
+          <h3>OX TONGUE</h3>
+          <p class="food-description">Tender, braised ox tongue with sauce</p>
+          <p class="food-price">180 - 320</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-6.png">
+          <h3>FRIED BEEF</h3>
+          <p class="food-description">Deep fried seasoned beef slices</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-7.png">
+          <h3>BEEF SHANK</h3>
+          <p class="food-description">Slow-cooked beef shank in stew</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-8.png">
+          <h3>BEEF BROCCOLI</h3>
+          <p class="food-description">Stir-fried beef with broccoli</p>
+          <p class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/beef-9.png">
+          <h3>BEEF BRACIOLE</h3>
+          <p class="food-description">Rolled beef stuffed with herbs and spice</p>
+          <p class="food-price">180 - 320</p>
+        </div>
+      </div>
+      <div id="seafood" class="food-menu">
+        <div class="food">
+          <img src="../images/products/seafoods-1.png">
+          <h3>FRIED CALAMARES</h3>
+          <p class="food-description">Crispy buttered squid rings</p>
+          <p class="food-price">240</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-2.png">
+          <h3>FRIED SAUTED SHRIMP</h3>
+          <p class="food-description">Shrimp with garlic and seasonings</p>
+          <p class="food-price">250</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-3.png">
+          <h3>FRIED SHRIMP</h3>
+          <p class="food-description">Breaded shrimp deep-fried to perfection</p>
+          <p class="food-price">210 - 350</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-4.png">
+          <h3>SHRIMP CURRY</h3>
+          <p class="food-description">Shrimp in creamy coconut curry sauce</p>
+          <p  class="food-price">190 - 320</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-5.png">
+          <h3>SALTED EGG SHRIMP</h3>
+          <p class="food-description">Shrimp tossed in rich salted egg sauce</p>
+          <p class="food-price">225 - 370</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-6.png">
+          <h3>SHRIMP</h3>
+          <p class="food-description">Stir-fried shrimp with sauce</p>
+          <p class="food-price">150 - 270</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-7.png">
+          <h3>FISH FILLET</h3>
+          <p class="food-description">Tender fish cut grilled or fried</p>
+          <p class="food-price">210 - 400</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-8.png">
+          <h3>SINIGANG NA BANGUS</h3>
+          <p class="food-description">Milfish in a sour soup with vegetables</p>
+          <p class="food-price">180 - 260</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/seafoods-9.png">
+          <h3>TILAPIA CURRY</h3>
+          <p class="food-description">Tilapia fish cooked in fragrant curry sauce</p>
+          <p class="food-price">150 - 300</p>
+        </div>
+      </div>
+      <div id="vegetable" class="food-menu">
+        <div class="food">
+          <img src="../images/products/vegetables-1.png">
+          <h3>AMPALAYA</h3>
+          <p class="food-description">Stir-fried bitter melon with egg</p>
+          <p class="food-price">140 - 200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-2.png">
+          <h3>CHOPSUEY</h3>
+          <p class="food-description">Mixed stir-fried vegetables in sauce</p>
+          <p class="food-price">125 - 200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-3.png">
+          <h3>LOHAN VEGETABLE</h3>
+          <p class="food-description">Assorted Chinese vegetables in stir-fry</p>
+          <p class="food-price">150 - 170</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-4.png">
+          <h3>BROCCOLI w/ Pork</h3>
+          <p class="food-description">Broccoli florets with tender pork</p>
+          <p  class="food-price">170 - 300</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-5.png">
+          <h3>BROCCOLI w/ Young Corn</h3>
+          <p class="food-description">Stir-fried broccoli and tender young corn</p>
+          <p class="food-price">160 - 250</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-6.png">
+          <h3>PINAKBET</h3>
+          <p class="food-description">Mixed vegetables stewed in shrimp and pork</p>
+          <p class="food-price">140 - 200</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-7.png">
+          <h3>MUNG BEAN STEW</h3>
+          <p class="food-description">Hearty stew made with mung beans</p>
+          <p class="food-price">160 - 240</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-8.png">
+          <h3>ADOBONG KANGKONG</h3>
+          <p class="food-description">Water spinach in soy sauce and vinegar</p>
+          <p class="food-price">100 - 150</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/vegetables-9.png">
+          <h3>STIR FRIED VEGETABLE</h3>
+          <p class="food-description">Fresh vegetables quickly sauteed for flavor</p>
+          <p class="food-price">170 - 250</p>
+        </div>
+      </div>
+      <div id="drink" class="food-menu">
+        <div class="food">
+          <img src="../images/products/drinks-1.png">
+          <h3>ICE TEA</h3>
+          <p class="food-description">Sweetened chilled tea</p>
+          <p class="food-price">40</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-2.png">
+          <h3>MANGO JUICE</h3>
+          <p class="food-description">Refreshing juice made from ripe mangoes</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-3.png">
+          <h3>PINEAPPLE JUICE</h3>
+          <p class="food-description">Sweet and tangy juice from fresh pineapples</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-4.png">
+          <h3>BOTTLED WATER</h3>
+          <p class="food-description">Purified water in a bottle</p>
+          <p  class="food-price">20 - 25</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-5.png">
+          <h3>SOFTDRINKS IN CAN</h3>
+          <p class="food-description">Carbonated drinks packaged in aluminun cans</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-6.png">
+          <h3>SOFTDRINK IN BOTTLE</h3>
+          <p class="food-description">Carbonated drinks packaged in plastic bottles</p>
+          <p class="food-price">28</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-7.png">
+          <h3>MANGO SHAKE</h3>
+          <p class="food-description">Creamy mango drink blended with milk</p>
+          <p class="food-price">100</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-8.png">
+          <h3>LYCHE SHAKE</h3>
+          <p class="food-description">Smooth lychee drink with milk</p>
+          <p class="food-price">100</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/drinks-9.png">
+          <h3>MELON SHAKE</h3>
+          <p class="food-description">Shake blended in melon and shake</p>
+          <p class="food-price">100</p>
+        </div>
+      </div>
+      <div id="dessert" class="food-menu">
+        <div class="food">
+          <img src="../images/products/deserts-1.png">
+          <h3>HALO-HALO</h3>
+          <p class="food-description">Dessert mixed fruits, shaved ice, and milk</p>
+          <p class="food-price">100 - 150</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-2.png">
+          <h3>LECHE FLAN</h3>
+          <p class="food-description">Crean caramel custard dessert</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-3.png">
+          <h3>MAIS CON HIELO</h3>
+          <p class="food-description">Sweet corn with shave ice and milk</p>
+          <p class="food-price">100</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-4.png">
+          <h3>FRUIT SALAD</h3>
+          <p class="food-description">Mixed fresh fruits tossed with cream</p>
+          <p  class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-5.png">
+          <h3>MACARONI SALAD</h3>
+          <p class="food-description">Creamy pasta salad with vegetables</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-6.png">
+          <h3>MANGO SAGO</h3>
+          <p class="food-description">Dessert with mango, sago, and coconut milk</p>
+          <p class="food-price">75</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-7.png">
+          <h3>POTATO SALAD</h3>
+          <p class="food-description">Creamy salad made with sliced potatoes</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-8.png">
+          <h3>BROKEN GLASS</h3>
+          <p class="food-description">Gelatin dessert with creamy base</p>
+          <p class="food-price">60</p>
+        </div>
+        <div class="food">
+          <img src="../images/products/deserts-9.png">
+          <h3>BAGUIO FRESH</h3>
+          <p class="food-description">Fresh mixed of fruits and vegetables</p>
+          <p class="food-price">140</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/25fa6bbdfe.js" crossorigin="anonymous"></script>
+  <script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+  }
+  function hideSide(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+  }
+  </script>
+  <script>
+    $(function($) {
+        var $navbar = $('.navbar');
+        var $contactHeader = $('.contact-header');
+
+        $(window).scroll(function() {
+            var currentScroll = $(this).scrollTop();
+
+            if (currentScroll > 0) {
+                $navbar.addClass('navbar-color');
+                $contactHeader.slideUp(); 
+            } else {
+                $navbar.removeClass('navbar-color');
+                $contactHeader.slideDown(); 
+            }
+        });
+    });
+  </script>
+
+<script src="../final_project.js"></script>
+</body>
+</html>

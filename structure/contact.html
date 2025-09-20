@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../styles/one_four_four_zero.css">
+  <link rel="stylesheet" href="../styles/final_project.css">
+  <link rel="stylesheet" href="../styles/one_nine_zero_six.css">
+  <link rel="stylesheet" href="../styles/seven_six_eight.css">
+  <link rel="stylesheet" href="../styles/four_two_five.css">
+  <link rel="stylesheet" href="../styles/three_seven_five.css">
+  <link rel="stylesheet" href="../styles/three_six_five.css">
+  <link rel="stylesheet" href="../styles/three_three_five.css">
+  <link rel="stylesheet" href="../styles/three_two_zero.css">
+  <link rel="stylesheet" href="../styles/three_zero_zero.css">
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+</head>
+<body>
+  <div id="contact" class="contact">
+    <div class="header">
+      <div class="contact-header">
+        <p><i class="fa-solid fa-location-dot"></i>Profugo St. Lucena City</p>
+          <p><i class="fa-regular fa-clock"></i>Daily: 9:00am - 10:00pm</p>
+          <p><i class="fa-solid fa-phone"></i>(042) 710 3531</p>
+          <p><i class="fa-regular fa-envelope"></i>antiguarestaurantlucena@gmail.com</p>
+      </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../images/home/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul class="sidebar">
+            <li onclick="hideSide()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="home.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+            <li class="hideOnMobile"><a href="products.html">Products</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+            <li class="hamburger-menu" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="contact-bg">
+      <img src="../images/contact/contact-background.jpg">
+    </div>
+    <div class="contact-location-us">
+      <div class="contact-us">
+        <h4>Contact Us</h4>
+        <input type="text" placeholder="First Name" class="first">
+        <input type="text" placeholder="Last Name" class="second"><br>
+        <input type="text" placeholder="Email" class="third"><br>
+        <input type="text" placeholder="Phone" class="fourth"><br>
+        <input type="text" placeholder="Message" class="fifth"><br>
+        <button>SEND</button>
+      </div>
+      <div class="break-line"></div>
+      <div class="location">
+        <h4>Location</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.26908370778!2d121.61060367501791!3d13.935033193025015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b5ba53c84fd%3A0x5d8bfb6a4d804e1!2sCafe%20Antigua!5e1!3m2!1sen!2sph!4v1731588984972!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h4>Contact Details</h4>
+        <div class="contact-logo">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>WJP7+277 Profugo Street Lucena City 4301 Quezon Avenue Philippines</p>
+        </div>
+        <div class="contact-logo">
+          <i class="fa-solid fa-phone-volume"></i>
+          <p>(042) 710 3531</p>
+        </div>
+        <div class="contact-logo">
+          <i class="fa-brands fa-facebook-f"></i>
+          <p>Eastern Precious Cuisine</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us-footer">
+      <p>WJP7+277, Profugo Street, Lucena, 4301 Quezon, Philippines P: (042) 710 3531</p>
+      <div class="contact-us-footer-2">
+        <i class="fa-regular fa-copyright"></i>
+        <p>2024 Cafe Antigua | Private Policy | Accessibility Statement</p>
+      </div>
+    </div>
+    <div class="contact-us-designer-rights">
+      <i class="fa-regular fa-copyright"></i>
+      <p>2024 | Design and Develop by Peixu | All Rights Reserved</p>
+    </div>
+  </div>
+  <script src="final_project.js"></script>
+  <script src="https://kit.fontawesome.com/25fa6bbdfe.js" crossorigin="anonymous"></script>
+  <script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+  }
+  function hideSide(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+  }
+  </script>
+   <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        
+        if (targetId.startsWith('#')) {
+          e.preventDefault();  
+  
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+  
+            const menuCategories = document.querySelectorAll('.menu-category');
+            menuCategories.forEach(category => {
+              category.classList.remove('active');
+            });
+  
+            targetElement.classList.add('active');
+          }
+        }
+      });
+    });
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const specialtyCategory = document.getElementById('specialty');
+      if (specialtyCategory) {
+        specialtyCategory.classList.add('active');
+        window.scrollTo({
+          top: specialtyCategory.offsetTop - 80, 
+          behavior: 'smooth'
+        });
+      }
+    });
+  </script>
+  <script>
+    $(function($) {
+        var $navbar = $('.navbar');
+        var $contactHeader = $('.contact-header');
+  
+        $(window).scroll(function() {
+            var currentScroll = $(this).scrollTop();
+  
+            if (currentScroll > 0) {
+                $navbar.addClass('navbar-color');
+                $contactHeader.slideUp(); 
+            } else {
+                $navbar.removeClass('navbar-color');
+                $contactHeader.slideDown(); 
+            }
+        });
+    });
+  </script>
+</body>
+</html>

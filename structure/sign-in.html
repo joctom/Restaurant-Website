@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigua Restaurant - Sign In</title>
+  <link rel="stylesheet" href="../styles/final_project.css">
+  <link rel="stylesheet" href="../styles/one_nine_zero_six.css">
+  <link rel="stylesheet" href="../styles/seven_six_eight.css">
+  <link rel="stylesheet" href="../styles/four_two_five.css">
+  <link rel="stylesheet" href="../styles/three_seven_five.css">
+  <link rel="stylesheet" href="../styles/three_six_five.css">
+  <link rel="stylesheet" href="../styles/three_three_five.css">
+  <link rel="stylesheet" href="../styles/three_two_zero.css">
+</head>
+<body>
+  <div class="header">
+    <div class="contact-header">
+      <p><i class="fa-solid fa-location-dot"></i>Profugo St. Lucena City</p>
+        <p><i class="fa-regular fa-clock"></i>Daily: 9:00am - 10:00pm</p>
+        <p><i class="fa-solid fa-phone"></i>(042) 710 3531</p>
+        <p><i class="fa-regular fa-envelope"></i>antiguarestaurantlucena@gmail.com</p>
+    </div>
+   <div class="navbar">
+        <div class="logo">
+          <img src="../images/home/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul class="sidebar">
+            <li onclick="hideSide()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="home.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+            <li class="hideOnMobile"><a href="products.html">Products</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="hamburger-menu" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  <div class="sign-in-container">
+    <img src="../images/forms/background-forms.jpg">
+    <div class="content-container">
+      <img src="../images/forms/background-forms.jpg">
+      <div class="content-data">
+        <a href="products.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="order-sign-in">
+          <h3>ORDER NOW</h3>
+          <p>Sign in your account</p>
+          <input type="text" placeholder="Phone number, username, or email"><br>
+          <input type="password" placeholder="Password"><br>
+          <button class="login-button">Log In</button><br>
+          <a href="#">Forgot your password?</a>
+          <div class="breaks">
+            <div class="sign-line-break"></div>
+            <p>or</p>
+            <div class="sign-line-break"></div>
+          </div>
+          <div class="medium">
+            <div class="social-media-facebook">
+              <i class="fa-brands fa-facebook"></i>
+              <a href="https://www.facebook.com/" target="_blank"><button>Continue with Facebook</button></a>
+            </div>
+            <div class="social-media-google">
+              <i class="fa-brands fa-google"></i>
+              <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1812573153%3A1655944654029516&flowEntry=ServiceLogin&flowName=WebLiteSignIn&ifkv=AX3vH39E0iYVTmn-NoMNM_C35EPrno8LWsRx2Qhr0HApkVLZ-Zc_Vql8ouaSQOiXzEmthrpOPAV5" target="_blank"><button>Continue with Google</button></a>
+            </div>
+            <div class="social-media-apple">
+              <i class="fa-brands fa-apple"></i>
+              <a href="https://www.icloud.com/" target="_blank"><button>Continue with Apple</button></a>
+            </div> 
+          </div>
+          <div class="break-2">
+            <div class="line-break-2"></div>
+              <p>Not on Antigua yet? <span><a href="sign-up.html">Sign Up</a></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/25fa6bbdfe.js" crossorigin="anonymous"></script>
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display= 'flex'
+    }
+    function hideSide(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display= 'none'
+    }
+    </script>
+</body>
+</html>

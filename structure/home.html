@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="../styles/final_project.css">
+  <link rel="stylesheet" href="../styles/one_nine_zero_six.css">
+  <link rel="stylesheet" href="../styles/seven_six_eight.css">
+  <link rel="stylesheet" href="../styles/four_two_five.css">
+  <link rel="stylesheet" href="../styles/three_seven_five.css">
+  <link rel="stylesheet" href="../styles/three_six_five.css">
+  <link rel="stylesheet" href="../styles/three_three_five.css">
+  <link rel="stylesheet" href="../styles/three_two_zero.css">
+  <link rel="stylesheet" href="../styles/three_zero_zero.css">
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script>
+    $(function($) {
+        var $navbar = $('.navbar');
+    
+        $(window).scroll(function(event) {
+            var $current = $(this).scrollTop();
+    
+            if ($current > 0) {
+                $navbar.addClass('navbar-color');
+            } else {
+                $navbar.removeClass('navbar-color');
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+  <div id="home">
+    <div class="header">
+      <div class="contact-header">
+        <p><i class="fa-solid fa-location-dot"></i>Profugo St. Lucena City</p>
+          <p><i class="fa-regular fa-clock"></i>Daily: 9:00am - 10:00pm</p>
+          <p><i class="fa-solid fa-phone"></i>(042) 710 3531</p>
+          <p><i class="fa-regular fa-envelope"></i>antiguarestaurantlucena@gmail.com</p>
+      </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../images/home/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul class="sidebar">
+            <li onclick="hideSide()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="home.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+            <li class="hideOnMobile"><a href="products.html">Products</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+            <li class="hamburger-menu" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="home-content">
+      <div class="food-content">
+        <img src="../images/home/food1.png">
+        <img src="../images/home/food2.png">
+        <img src="../images/home/food3.png">
+      </div>
+      <h3 class="text1">Bringing you fresh flavors<br>from farm to table</h3>
+      <p class="text2">Where good foods and great memories meet</p>
+      <div class="main-but">
+        <a href="sign-in.html"><button>Book a table</button></a>
+        <a href="products/products.html"><button class="menu">View our menu</button></a>
+      </div>
+    </div>
+    <div class="home-footer">
+      <div class="left-triangle">
+        <div class="left-foot">
+          <p>Filipino-Chinese Food Style</p>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="right-triangle">
+        <div class="boxes">
+          <div class="box-1"></div>
+          <div class="box-2"></div>
+          <div class="box-3"></div>
+        </div>
+        <div class="right-foot">
+          <img src="../images/home/happy-eating.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="final_project.js"></script>
+  <script src="https://kit.fontawesome.com/25fa6bbdfe.js" crossorigin="anonymous"></script>
+  <script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex'
+  }
+  function hideSide(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none'
+  }
+  </script>
+</body>
+</html>

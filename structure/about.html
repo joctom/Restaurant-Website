@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="../styles/final_project.css">
+  <link rel="stylesheet" href="../styles/one_nine_zero_six.css">
+  <link rel="stylesheet" href="../styles/seven_six_eight.css">
+  <link rel="stylesheet" href="../styles/four_two_five.css">
+  <link rel="stylesheet" href="../styles/three_seven_five.css">
+  <link rel="stylesheet" href="../styles/three_six_five.css">
+  <link rel="stylesheet" href="../styles/three_three_five.css">
+  <link rel="stylesheet" href="../styles/three_two_zero.css">
+  <link rel="stylesheet" href="../styles/three_zero_zero.css">
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+</head>
+<body>
+  <div id="about">
+    <div class="header">
+      <div class="contact-header">
+        <p><i class="fa-solid fa-location-dot"></i>Profugo St. Lucena City</p>
+          <p><i class="fa-regular fa-clock"></i>Daily: 9:00am - 10:00pm</p>
+          <p><i class="fa-solid fa-phone"></i>(042) 710 3531</p>
+          <p><i class="fa-regular fa-envelope"></i>antiguarestaurantlucena@gmail.com</p>
+      </div>
+      <div class="navbar">
+        <div class="logo">
+          <img src="../images/home/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul class="sidebar">
+            <li onclick="hideSide()"><a href="#"><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="home.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="blog.html">Blog</a></li>
+            <li class="hideOnMobile"><a href="products.html">Products</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li><a href="sign-in.html"><button>Sign in</button></a></li>
+            <li class="hamburger-menu" onclick="showSidebar()">
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="about-button">
+        <div class="button-left">
+          <button><i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="button-right">
+          <button><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
+      <div class="about-content-info">
+        <img src="../images/about/tourists.png">
+        <div class="text-overlay">Destination for tourists</div>
+      </div>
+      <div class="about-content-info">
+        <img src="../images/about/cater.png">
+        <div class="text-overlay">A feast for all tastes</div>
+      </div>
+      <div class="about-content-info">
+        <img src="../images/about/family-bond.png">
+        <div class="text-overlay">Where every meal is a family celebration</div>
+      </div>
+      <div class="about-content-info">
+        <img src="../images/about/cafe.png">
+        <div class="text-overlay">Clean, spacious, and aircondition blaring</div>
+      </div>
+    </div>
+    <div class="about-footer">
+      <div class="landmark">
+        <img src="../images/about/landmark.png">
+        <div class="landmark-text">
+          <h3>Landmark</h3>
+          <p>Antigua Restaurant, also known as Cafe Antigua, is one of the oldest dining spots in Lucena City, Quezon Province. It has built a reputation over the years for serving delicious traditional Filipino dishes.</p>
+        </div>
+      </div>
+      <div class="events">
+        <img src="../images/about/events.png">
+        <div class="events-text">
+          <h3>Gatherings</h3>
+          <p>Cafe Antigua had wide function rooms in their upper floors which served as venues for many weddings. It was also perfect for hosting memorable events.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="final_project.js"></script>
+  <script src="https://kit.fontawesome.com/25fa6bbdfe.js" crossorigin="anonymous"></script>
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display= 'flex'
+    }
+    function hideSide(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display= 'none'
+    }
+    </script>
+    <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.about-content-info');
+    const totalSlides = slides.length;
+
+    const buttonLeft = document.querySelector('.button-left button');
+    const buttonRight = document.querySelector('.button-right button');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides; 
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+
+    setInterval(autoSlide, 4000);
+
+    buttonLeft.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; 
+      showSlide(currentIndex);
+    });
+
+    buttonRight.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+    </script>
+</body>
+</html>
